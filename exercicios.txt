@@ -1,0 +1,12 @@
+1) Crie uma classe que represente uma conta bancária. Toda conta possui um titular, um número e um saldo. 
+Crie um método para depositar um valor e outro para realizar um saque (lembre que saldo não pode ser negativo). 
+
+2) Crie um classe Banco que tem um lista de Contas. 
+
+3) Crie um método da classe Banco que retorna o total de saldos que esse banco tem (usando Stream).
+
+4) Crie um metodos classe Banco que retorna o uma Lista de Contas ordadenas por:
+	* valor do saldo.
+	* nome do tilular.
+	* numero da conta em ordem decrescente.
+	
