@@ -30,64 +30,65 @@ Vamos usar uma classe Produto para simular compras em uma loja.
 
 ## Códigos aprendidos
 
-Código de maneitas variadas de se usar o forEach.
+Código de maneitas variadas de se usar o forEach:
 `java
 
-		// for tradiconal
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
-		}
-		
-		// forEach básico
-		for (Integer elem : list) {
-			System.out.println(elem);
-		}
-		
-		// forEach usando arrow function
-		list.forEach(elem -> System.out.println(elem));
-		
-		// forEach usnado funções lambda
-		list.forEach(System.out::println);
+// for tradiconal
+for (int i = 0; i < list.size(); i++) {
+	System.out.println(list.get(i));
+}
+
+// forEach básico
+for (Integer elem : list) {
+	System.out.println(elem);
+}
+
+// forEach usando arrow function
+list.forEach(elem -> System.out.println(elem));
+
+// forEach usnado funções lambda
+list.forEach(System.out::println);
 
 `
 
-Código para usar filter com uma lista de Integers.
+Código para usar filter com uma lista de Integers:
 `java
-		List<Integer> integers = Util.generateRandomList(100, 0);
+List<Integer> integers = Util.generateRandomList(100, 0);
 
-		// quero filtrar todos os números menores que 50.
-		List<Integer> aux = integers.stream().filter(elem -> elem < 10).collect(Collectors.toList());
+// quero filtrar todos os números menores que 50.
+List<Integer> aux = integers.stream().filter(elem -> elem < 10).collect(Collectors.toList());
 
-		aux.forEach(elem -> System.out.println(elem));
+aux.forEach(elem -> System.out.println(elem));
 `
 
-Como filtar um "Produto"
-
+Como filtar um "Produto":
 `java
-		// filtrando todos so produtos que tem preço maior ou igal a R$ 3,00 e
-		// impriminto eles.
-		products.stream().filter(product -> product.getPrice() >= 3 && product.getPrice() < 5)
-				.forEach(product -> System.out.println(product));
+// filtrando todos so produtos que tem preço maior ou igal a R$ 3,00 e
+// impriminto eles.
+products.stream().filter(product -> product.getPrice() >= 3 && product.getPrice() < 5)
+		.forEach(product -> System.out.println(product));
 
 `
 
+Gerando um map de números ao quadrado:
 `java
-		List<Integer> integers = Util.generateRandomList(100, 0);
+List<Integer> integers = Util.generateRandomList(100, 0);
 
-		// com lista de números, quero gerar a lista daqueles números ao quadrado.
+// com lista de números, quero gerar a lista daqueles números ao quadrado.
 
-		integers.stream().filter(elem -> elem < 50).mapToDouble(elem -> Math.pow(elem, 2))
-				.forEach(elem -> System.out.println(elem));
+integers.stream().filter(elem -> elem < 50).mapToDouble(elem -> Math.pow(elem, 2))
+		.forEach(elem -> System.out.println(elem));
 
 `
-Usando o Sorted
+
+Usando o Sorted:
 `java
-		List<Product> products = Util.generateProductList();
-		
-		// imprimindo normalmente.
-		products.forEach(System.out::println);
-		
-		// imprimindo em ordem crescente pelo nome do produto.
-		products.stream().sorted(Comparator.comparing(Product::getName, Comparator.reverseOrder())).forEach(System.out::println);
+List<Product> products = Util.generateProductList();
+
+// imprimindo normalmente.
+products.forEach(System.out::println);
+
+// imprimindo em ordem crescente pelo nome do produto.
+products.stream().sorted(Comparator.comparing(Product::getName, Comparator.reverseOrder())).forEach(System.out::println);
 `
 
