@@ -31,6 +31,7 @@ Vamos usar uma classe Produto para simular compras em uma loja.
 ## Códigos aprendidos
 
 Código de maneitas variadas de se usar o forEach:
+
 `java
 
 // for tradiconal
@@ -52,6 +53,7 @@ list.forEach(System.out::println);
 `
 
 Código para usar filter com uma lista de Integers:
+
 `java
 List<Integer> integers = Util.generateRandomList(100, 0);
 
@@ -62,6 +64,7 @@ aux.forEach(elem -> System.out.println(elem));
 `
 
 Como filtar um "Produto":
+
 `java
 // filtrando todos so produtos que tem preço maior ou igal a R$ 3,00 e
 // impriminto eles.
@@ -71,6 +74,7 @@ products.stream().filter(product -> product.getPrice() >= 3 && product.getPrice(
 `
 
 Gerando um map de números ao quadrado:
+
 `java
 List<Integer> integers = Util.generateRandomList(100, 0);
 
@@ -82,6 +86,7 @@ integers.stream().filter(elem -> elem < 50).mapToDouble(elem -> Math.pow(elem, 2
 `
 
 Usando o Sorted:
+
 `java
 List<Product> products = Util.generateProductList();
 
